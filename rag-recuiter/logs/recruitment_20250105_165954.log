@@ -1,0 +1,28 @@
+2025-01-05 16:59:54,952 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 17:00:56,186 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:01:31,003 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:01:31,004 - AI_Recruiter - ERROR - Error processing resume: list indices must be integers or slices, not str
+2025-01-05 17:01:31,005 - AI_Recruiter - ERROR - Processing error: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 128, in main
+    result = asyncio.run(process_resume(file_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 58, in process_resume
+    return await orchestrator.process_application(resume_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\orchestrator_agent.py", line 62, in process_application
+    job_matches = await self.matcher.run(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\matcher_agent.py", line 32, in run
+    print(messages["content"])
+          ~~~~~~~~^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str

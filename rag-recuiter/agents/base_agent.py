@@ -32,18 +32,18 @@ class BaseAgent:
             print(f"Error in querying Ollama: {e}")
             raise e
         
-    def _parse_json_safely(self,text:str)->Dict[str,Any]:
+    def _parse_json_safely(self, text: str) -> Dict[str, Any]:
+        """Safely parse JSON from text, handling potential errors"""
         try:
-            start=text.find("{")
-            end=text.rfind("}")
-            
-            if start!=-1 and end!=-1:
-                json_str=text[start:end+1]
+            # Try to find JSON-like content between curly braces
+            start = text.find("{")
+            end = text.rfind("}")
+            if start != -1 and end != -1:
+                json_str = text[start : end + 1]
                 return json.loads(json_str)
-            return {"error":"No JSON content found"}
-        except Exception as e:
-            print(f"Error in parsing JSON: {e}")
-            return {"error":str(e)}
+            return {"error": "No JSON content found"}
+        except json.JSONDecodeError:
+            return {"error": "Invalid JSON content"}
         
     
         

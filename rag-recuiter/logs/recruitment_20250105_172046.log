@@ -1,0 +1,6 @@
+2025-01-05 17:20:46,677 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 17:21:44,178 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:22:15,367 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:22:28,140 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:23:07,948 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:23:45,232 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"

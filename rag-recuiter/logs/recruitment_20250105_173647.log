@@ -1,0 +1,29 @@
+2025-01-05 17:36:47,681 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 17:37:30,953 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:37:54,372 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:38:07,190 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 17:38:07,190 - AI_Recruiter - ERROR - Error processing resume: 'MatcherAgent' object has no attribute 'search_jobs'
+2025-01-05 17:38:07,192 - AI_Recruiter - ERROR - Processing error: 'MatcherAgent' object has no attribute 'search_jobs'
+Traceback (most recent call last):
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 128, in main
+    result = asyncio.run(process_resume(file_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 58, in process_resume
+    return await orchestrator.process_application(resume_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\orchestrator_agent.py", line 62, in process_application
+    job_matches = await self.matcher.run(
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\matcher_agent.py", line 93, in run
+    matching_jobs = self.search_jobs(skills, experience_level)
+                    ^^^^^^^^^^^^^^^^
+AttributeError: 'MatcherAgent' object has no attribute 'search_jobs'

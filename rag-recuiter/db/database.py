@@ -116,3 +116,14 @@ class JobDatabase:
             print(f"Error in searching jobs: {e}")
             return []
         
+    def clear_jobs(self):
+        """Clear all jobs from the database"""
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.execute("DELETE FROM jobs")
+                conn.commit()
+                return True
+        except Exception as e:
+            print(f"Error clearing jobs: {e}")
+            return False
+        

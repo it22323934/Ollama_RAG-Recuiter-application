@@ -1,0 +1,12 @@
+2025-01-05 16:13:15,473 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 16:14:05,977 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:14:28,008 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:15:06,359 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:15:43,219 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:16:11,572 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 16:16:11,577 - AI_Recruiter - ERROR - Processing error: 'detailed_analysis'
+Traceback (most recent call last):
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 146, in main
+    st.write(result["detailed_analysis"]["skills_analysis"])
+             ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'detailed_analysis'

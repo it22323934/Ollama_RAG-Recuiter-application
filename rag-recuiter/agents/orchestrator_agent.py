@@ -55,12 +55,12 @@ class OrchestratorAgent(BaseAgent):
                 [{"role": "user", "content": str(extracted_data)}]
             )
             workflow_context.update(
-                {"analysis_results": analysis_results, "current_stage": "matching"}
+                {"analysis_results": analysis_results,"current_stage": "matching"}
             )
 
             # Match with jobs
             job_matches = await self.matcher.run(
-                [{"role": "user", "content": str(analysis_results)}]
+                [{"role": "user", "content": str(extracted_data)}]
             )
             workflow_context.update(
                 {"job_matches": job_matches, "current_stage": "screening"}
