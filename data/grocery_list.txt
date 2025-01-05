@@ -1,0 +1,61 @@
+Apples
+Bananas
+Oranges
+Grapes
+Tomatoes
+Lettuce
+Spinach
+Carrots
+Onions
+Potatoes
+Garlic
+Bell peppers
+Cucumbers
+Milk
+Eggs
+Cheese
+Butter
+Yogurt
+Chicken
+Ground beef
+Pork chops
+Fish
+Shrimp
+Bread
+Rice
+Pasta
+Flour
+Sugar
+Salt
+Pepper
+Cooking oil
+Canned beans
+Canned tomatoes
+Peanut butter
+Chips
+Crackers
+Cookies
+Granola bars
+Popcorn
+Frozen vegetables
+Frozen fruits
+Ice cream
+Frozen pizzas
+Water
+Juice
+Coffee
+Tea
+Soda
+Ketchup
+Mustard
+Mayonnaise
+Soy sauce
+Vinegar
+Cinnamon
+Paprika
+Cumin
+Paper towels
+Toilet paper
+Dish soap
+Laundry detergent
+Trash bags

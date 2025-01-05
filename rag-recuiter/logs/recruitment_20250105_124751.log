@@ -1,0 +1,31 @@
+2025-01-05 12:47:51,581 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 12:48:03,663 - AI_Recruiter - ERROR - Error processing resume: name 'model' is not defined
+2025-01-05 12:48:03,664 - AI_Recruiter - ERROR - Processing error: name 'model' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 128, in main
+    result = asyncio.run(process_resume(file_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\envs\global\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 58, in process_resume
+    return await orchestrator.process_application(resume_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\orchestrator_agent.py", line 46, in process_application
+    extracted_data = await self.extractor.run(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\extractor_agent.py", line 27, in run
+    extracted_info=self._query_ollama(raw_text)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\base_agent.py", line 33, in _query_ollama
+    raise e
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\agents\base_agent.py", line 22, in _query_ollama
+    model=="llama3.2",
+    ^^^^^
+NameError: name 'model' is not defined

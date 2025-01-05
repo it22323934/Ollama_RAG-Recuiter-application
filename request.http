@@ -1,0 +1,26 @@
+# POST http://localhost:11434/api/generate
+
+# {
+#     "model":"llama3.2",
+#     "prompt":"Why is the sky blue?",
+#     "stream":false
+# }
+
+# POST http://localhost:11434/api/chat
+
+# {
+#     "model":"llama3.2",
+#     "messages":[
+#         {"role":"user","content":"Why is the sky blue?"}
+#     ],
+#     "stream":false
+# }
+
+POST http://localhost:11434/api/generate
+
+{
+    "model":"llama3.2",
+    "prompt":"Why is the sky blue? Respond using json",
+    "format":"json",
+    "stream":false
+}

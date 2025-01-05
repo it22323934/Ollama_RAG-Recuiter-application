@@ -1,0 +1,12 @@
+2025-01-05 12:52:03,569 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-05 12:53:06,192 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 12:53:27,971 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 12:53:52,914 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 12:54:19,129 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 12:54:45,450 - httpx - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-05 12:54:45,456 - AI_Recruiter - ERROR - Processing error: 'screening_score'
+Traceback (most recent call last):
+  File "C:\Users\Asiri Jayawardena\Desktop\OLLAMA\rag-recuiter\app.py", line 182, in main
+    f"{result['screening_results']['screening_score']}%",
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'screening_score'
